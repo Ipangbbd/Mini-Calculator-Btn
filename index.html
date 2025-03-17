@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calc By Ali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Toggle button -->
+    <button id="calcBtn">Calculator</button>
+
+    <!-- Calculator panel -->
+    <div id="calc">
+        <button id="closeX">×</button>
+        <div id="result">0</div>
+        <div class="btn-grid">
+            <button class="btn clear" onclick="clearAll()">C</button>
+            <button class="btn back" onclick="backspace()">←</button>
+            <button class="btn op" onclick="addOp('%')">%</button>
+            <button class="btn op" onclick="addOp('/')">÷</button>
+
+            <button class="btn" onclick="addNum('7')">7</button>
+            <button class="btn" onclick="addNum('8')">8</button>
+            <button class="btn" onclick="addNum('9')">9</button>
+            <button class="btn op" onclick="addOp('*')">×</button>
+
+            <button class="btn" onclick="addNum('4')">4</button>
+            <button class="btn" onclick="addNum('5')">5</button>
+            <button class="btn" onclick="addNum('6')">6</button>
+            <button class="btn op" onclick="addOp('-')">−</button>
+
+            <button class="btn" onclick="addNum('1')">1</button>
+            <button class="btn" onclick="addNum('2')">2</button>
+            <button class="btn" onclick="addNum('3')">3</button>
+            <button class="btn op" onclick="addOp('+')">+</button>
+
+            <button class="btn" onclick="addNum('0')">0</button>
+            <button class="btn" onclick="addNum('00')">00</button>
+            <button class="btn" onclick="addNum('.')">.</button>
+            <button class="btn eq" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Main toggle button */
+#calcBtn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: all 0.15s ease;
+}
+
+#calcBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Calculator container */
+#calc {
+    display: none;
+    position: fixed;
+    width: 230px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    padding: 15px;
+    z-index: 999;
+}
+
+#calc.visible {
+    display: block;
+    animation: pop-in 0.25s;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Display area */
+#result {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 22px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+/* Button grid */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 7px;
+}
+
+.btn {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    height: 45px;
+}
+
+.btn:hover {
+    background-color: #e6e6e6;
+}
+
+.op {
+    background-color: #ffcc80;
+    color: #e65100;
+}
+
+.eq {
+    background-color: #e65100;
+    color: white;
+}
+
+.clear {
+    background-color: #ff5252;
+    color: white;
+}
+
+.back {
+    background-color: #ffab91;
+    color: #333;
+}
+
+#closeX {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+}
